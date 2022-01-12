@@ -79,10 +79,8 @@ def THUMBYIO(screenUpdate):
     buttonPressString = out.split("\r")
     if (len(buttonPressString) < 6):
         return
-    i = 0
-    while i < 6:
-        print(stringToBool(buttonPressString[i]))
-        i += 1
+
+    
     #keys
     if stringToBool(buttonPressString[0]) and stringToBool(buttonPressString[1]) and not buttonPress[6]: #start
         pyboy.send_input(WindowEvent.PRESS_BUTTON_START)
